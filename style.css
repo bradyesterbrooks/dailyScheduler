@@ -1,0 +1,14 @@
+.fa-save {
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    /* border-color: 2px solid black; */
+}
+
+.jumbotron {
+    text-align: center;
+    color: white;
+}
+
+.today {
+    color: white;
+}
