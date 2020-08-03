@@ -33,11 +33,12 @@ for (let i = 8; i < 19; i++) {
     var this_time=$("#hour"+i).attr('time');
     var this_time_int=parseInt(this_time);
     console.log(this_time_int);
+    console.log(currentHour);
 
     if (this_time<currentHour){
         $("#hour"+i).addClass("past_time");
     }
-    else if (this_time===currentHour){
+    else if (this_time==currentHour){
         $("#hour"+i).addClass("current_time");
     }
     else {
