@@ -18,3 +18,15 @@
     color:white;
     background-color: blue;
 }
+
+.past_time {
+    background-color: lightcoral;
+}
+
+.current_time {
+    background-color: lightgreen;
+}
+
+.future_time {
+    background-color: lightblue;
+}

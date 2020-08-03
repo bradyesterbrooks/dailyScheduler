@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     var currentHour = parseInt(moment().format("HH"));
     // jquery and js below
-    $(".today").text(moment().format("dddd, MMMM Do, YYYY"));
+    $(".today").text(moment().format("dddd, MMMM Do, YYYY h:mm a"));
 
     //save button -> text content to local storage
 
@@ -27,6 +27,24 @@ $(document).ready(function () {
 
 retrieve();
 
+//now we need to deal with the coloring of the hour blocks based on past and current
+
+for (let i = 8; i < 19; i++) {
+    var this_time=$("#hour"+i).attr('time');
+    var this_time_int=parseInt(this_time);
+    console.log(this_time_int);
+
+    if (this_time<currentHour){
+        $("#hour"+i).addClass("past_time");
+    }
+    else if (this_time===currentHour){
+        $("#hour"+i).addClass("current_time");
+    }
+    else {
+        $("#hour"+i).addClass("future_time");
+    }
+    
+}
 
 
 
